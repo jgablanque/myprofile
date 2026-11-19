@@ -1,4 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jedrik Maico G. Ablanque — Information Systems Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="[suspicious link removed]" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #f6f6f3;
+      --card-bg: #ffffff;
+      --text-main: #0f0f0f;
+      --text-muted: #4a4a4a;
+      
+      /* Black & white base with subtle red & blue accents */
+      --red-accent: #d01f17;
+      --blue-accent: #1652b8;
+      --border-dark: #0f0f0f;
+      --border-light: #e0e0dc;
+      
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.6;
+      padding: 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* Header & Navigation */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid var(--border-dark);
+      margin-bottom: 3rem;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      letter-spacing: -0.02em;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--red-accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-bottom: 3.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge-red {
+      background: var(--red-accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-blue {
+      background: var(--blue-accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      text-transform: lowercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-bio {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 68ch;
+      font-weight: 400;
+    }
+
+    /* Section Grid Layouts */
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: lowercase;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-dark);
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: var(--red-accent);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Cards & Panels */
+    .card {
+      background: var(--card-bg);
+      border: 2px solid var(--border-dark);
+      padding: 1.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .highlight-red {
+      color: var(--red-accent);
+      font-weight: 700;
+    }
+
+    .highlight-blue {
+      color: var(--blue-accent);
+      font-weight: 700;
+    }
+
+    /* List styling */
     .pill-list {
       display: flex;
       flex-wrap: wrap;
@@ -23,20 +225,13 @@
       flex-direction: column;
     }
 
-    .photo-placeholder {
+    .gallery-card img {
       width: 100%;
-      height: 220px;
-      background: #e5e5e0;
-      border: 1px dashed var(--border-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-weight: 600;
-      font-size: 0.85rem;
-      text-align: center;
-      padding: 1rem;
-      margin-bottom: 1rem;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--border-light);
+      margin-bottom: 0.85rem;
     }
 
     .gallery-card figcaption {
@@ -124,7 +319,7 @@
         <div class="card">
           <h3>Math & Strategic Thinking <span class="highlight-red">Competitions</span></h3>
           <p>
-            Competed in various regional and national <strong>mathematics competitions</strong> from an early age. Enjoys logic puzzles, analytical problem-solving, and card games requiring strategy and odds evaluation like Poker, Blackjack, and Baccarat.
+            Competed in various math competitions as a kid. Enjoys logic puzzles, problem-solving, online gaming, and card games requiring strategy and probability like <strong>Poker, Blackjack, and Baccarat</strong>.
           </p>
         </div>
       </div>
@@ -159,7 +354,7 @@
 
     <!-- Scouting Experience -->
     <section id="scouting">
-      <h2 class="section-title">Boy Scouts & Leadership</h2>
+      <h2 class="section-title">Boy Scouts & Outdoor Leadership</h2>
       <div class="card">
         <h3>International & National Scouting Jamborees <span class="highlight-blue">Thailand & PH</span></h3>
         <p>
@@ -173,26 +368,26 @@
       <h2 class="section-title">Photo Gallery & Milestones</h2>
       <div class="grid-3">
         <figure class="gallery-card">
-          <div class="photo-placeholder">🎓 Graduation Photo</div>
+          <img src="images/photo1.jpg" alt="Ateneo de Davao Senior High School Graduation">
           <figcaption>
-            Senior High School Commencement
+            Senior High School Graduation
             <small>Ateneo de Davao University</small>
           </figcaption>
         </figure>
 
         <figure class="gallery-card">
-          <div class="photo-placeholder">🏈 Flag Football Tournament</div>
+          <img src="images/photo2.jpg" alt="Flag Football Competition in Manila">
           <figcaption>
-            National Football Competition
-            <small>Manila, Philippines</small>
+            American / Flag Football Competition
+            <small>Manila Tournament</small>
           </figcaption>
         </figure>
 
         <figure class="gallery-card">
-          <div class="photo-placeholder">⛺ Boy Scout ASEAN Jamboree</div>
+          <img src="images/photo3.jpg" alt="Boy Scout ASEAN Jamboree in Thailand">
           <figcaption>
-            ASEAN Scout Jamboree
-            <small>Thailand International Camp</small>
+            ASEAN Boy Scout Jamboree
+            <small>International Camping in Thailand</small>
           </figcaption>
         </figure>
       </div>
