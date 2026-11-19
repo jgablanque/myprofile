@@ -163,9 +163,9 @@
       gap: 1.5rem;
     }
 
-    .grid-3 {
+    .grid-4 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 1.5rem;
     }
 
@@ -220,31 +220,31 @@
     .gallery-card {
       background: var(--card-bg);
       border: 2px solid var(--border-dark);
-      padding: 1rem;
+      padding: 0.85rem;
       display: flex;
       flex-direction: column;
     }
 
     .gallery-card img {
       width: 100%;
-      height: 240px;
+      height: 220px;
       object-fit: cover;
       display: block;
       border: 1px solid var(--border-light);
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.75rem;
     }
 
     .gallery-card figcaption {
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text-main);
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     .gallery-card figcaption small {
       display: block;
       color: var(--text-muted);
-      font-weight: 400;
+      font-weight: 500;
       margin-top: 0.25rem;
     }
 
@@ -302,7 +302,7 @@
       </div>
       <h1>jedrik maico g. ablanque</h1>
       <p class="hero-bio">
-        Information Systems student born and raised in Davao City. Ateneo de Davao Senior High School graduate with a background in competitive flag football, mathematics competitions, ASEAN scouting jamborees, and strategic problem-solving.
+        Information Systems student born and raised in Davao City. Ateneo de Davao Senior High School alumnus with a passion for competitive flag football, mathematics, ASEAN scouting jamborees, and strategic problem-solving.
       </p>
     </section>
 
@@ -313,13 +313,13 @@
         <div class="card">
           <h3>Academic Foundation <span class="highlight-blue">AdDU SHS</span></h3>
           <p>
-            Graduated Senior High School from <strong>Ateneo de Davao University</strong>. Currently pursuing an <strong>Information Systems degree</strong>, applying system logic and quantitative methods to real-world data and technology challenges.
+            Graduated Senior High School from <strong>Ateneo de Davao University</strong>. Currently pursuing an <strong>Information Systems degree</strong>, focusing on systems thinking and quantitative problem-solving.
           </p>
         </div>
         <div class="card">
           <h3>Math & Strategic Thinking <span class="highlight-red">Competitions</span></h3>
           <p>
-            Competed in various math competitions as a kid. Enjoys logic puzzles, problem-solving, online gaming, and card games requiring strategy and probability like <strong>Poker, Blackjack, and Baccarat</strong>.
+            Competed in math competitions as a kid. Loves analytical activities, online games, hiking, running, and strategic card games such as <strong>Poker, Blackjack, and Baccarat</strong>.
           </p>
         </div>
       </div>
@@ -332,13 +332,13 @@
         <div class="card">
           <h3>American & Flag Football <span class="highlight-red">Manila Tournament</span></h3>
           <p>
-            Competed in high-level American Football / Flag Football tournaments in <strong>Manila</strong>, representing Davao as a competitive athlete on the national stage.
+            Competed in American / Flag Football tournaments in <strong>Manila</strong>, representing Davao as a competitive athlete on the national stage.
           </p>
         </div>
         <div class="card">
           <h3>Team Sports & Active Life</h3>
           <p>
-            Passionate player across team sports including <strong>soccer, basketball, and volleyball</strong>. Actively participates in outdoor activities such as hiking, running, and trail exploration.
+            Enjoys playing <strong>soccer, basketball, and volleyball</strong> alongside outdoor activities like hiking and running.
           </p>
           <div class="pill-list">
             <span class="pill">Flag Football</span>
@@ -358,31 +358,35 @@
       <div class="card">
         <h3>International & National Scouting Jamborees <span class="highlight-blue">Thailand & PH</span></h3>
         <p>
-          Joined the <strong>Boy Scouts</strong> and participated in outdoor camping activities across provincial, national, and <strong>ASEAN regional jamborees in Thailand</strong>. Developed leadership, survival skills, team coordination, and outdoor discipline.
+          Active member of the <strong>Boy Scouts</strong> who participated in provincial, national, and <strong>ASEAN regional jamborees in Thailand</strong>. Built outdoor leadership, survival skills, and team discipline.
         </p>
       </div>
     </section>
 
-    <!-- Photo Gallery -->
+    <!-- Photo Gallery (4 Photos) -->
     <section id="gallery">
       <h2 class="section-title">Photo Gallery & Milestones</h2>
-      <div class="grid-3">
+      <div class="grid-4">
+
+        <!-- Photo 1: Selfie -->
         <figure class="gallery-card">
-          <img src="images/photo1.jpg" alt="Ateneo de Davao Senior High School Graduation">
+          <img src="images/photo1.jpg" alt="Jedrik Maico G. Ablanque Selfie">
           <figcaption>
-            Senior High School Graduation
+            Personal Profile
+            <small>Jedrik Maico G. Ablanque</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 2: AdDU Graduation -->
+        <figure class="gallery-card">
+          <img src="images/photo2.jpg" alt="Ateneo de Davao Senior High School Graduation">
+          <figcaption>
+            SHS Graduation
             <small>Ateneo de Davao University</small>
           </figcaption>
         </figure>
 
-        <figure class="gallery-card">
-          <img src="images/photo2.jpg" alt="Flag Football Competition in Manila">
-          <figcaption>
-            American / Flag Football Competition
-            <small>Manila Tournament</small>
-          </figcaption>
-        </figure>
-
+        <!-- Photo 3: Thailand Boy Scouts -->
         <figure class="gallery-card">
           <img src="images/photo3.jpg" alt="Boy Scout ASEAN Jamboree in Thailand">
           <figcaption>
@@ -390,6 +394,16 @@
             <small>International Camping in Thailand</small>
           </figcaption>
         </figure>
+
+        <!-- Photo 4: Manila Flag Football -->
+        <figure class="gallery-card">
+          <img src="images/photo4.jpg" alt="Flag Football Competition in Manila">
+          <figcaption>
+            American / Flag Football
+            <small>Manila Tournament</small>
+          </figcaption>
+        </figure>
+
       </div>
     </section>
 
